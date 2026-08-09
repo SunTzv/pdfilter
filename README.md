@@ -17,6 +17,17 @@ pipx install git+https://github.com/SunTzv/pdfilter.git
 curl -sSL https://raw.githubusercontent.com/SunTzv/pdfilter/main/install.sh | bash
 ```
 
+## Uninstallation
+
+If you installed via `pipx`:
+```bash
+pipx uninstall pdfilter
+```
+Or use the uninstaller script:
+```bash
+curl -sSL https://raw.githubusercontent.com/SunTzv/pdfilter/main/uninstall.sh | bash
+```
+
 ## Usage
 
 To apply a predefined filter to a PDF:
