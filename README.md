@@ -12,9 +12,14 @@ The recommended way to install Python CLI applications is via `pipx`.
 pipx install git+https://github.com/SunTzv/pdfilter.git
 ```
 
-**Option 2: Using the Install Script**
+**Option 2: Using the Install Script (macOS/Linux)**
 ```bash
 curl -sSL https://raw.githubusercontent.com/SunTzv/pdfilter/main/install.sh | bash
+```
+
+**Option 3: Using the Install Script (Windows)**
+```powershell
+irm https://raw.githubusercontent.com/SunTzv/pdfilter/main/install.ps1 | iex
 ```
 
 ## Uninstallation
@@ -24,8 +29,15 @@ If you installed via `pipx`:
 pipx uninstall pdfilter
 ```
 Or use the uninstaller script:
+
+**macOS/Linux:**
 ```bash
 curl -sSL https://raw.githubusercontent.com/SunTzv/pdfilter/main/uninstall.sh | bash
+```
+
+**Windows:**
+```powershell
+irm https://raw.githubusercontent.com/SunTzv/pdfilter/main/uninstall.ps1 | iex
 ```
 
 ## Usage
