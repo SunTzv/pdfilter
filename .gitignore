@@ -48,3 +48,11 @@ sample*.pdf
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Web App Outputs and Dependencies
+web/node_modules/
+web/dist/
+node_modules/
+dist/
+npm-debug.log*
+yarn-error.log*
