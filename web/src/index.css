@@ -146,6 +146,7 @@ input[type=range] {
   width: 100%;
   background: transparent;
   padding: 12px 0;
+  touch-action: none;
 }
 
 input[type=range]::-webkit-slider-thumb {
@@ -291,3 +292,129 @@ input[type=range]:focus {
   border: 3px solid var(--text-color);
   box-shadow: 4px 4px 0 var(--text-color);
 }
+
+.presets-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Bottom Nav Bar Styles */
+.bottom-nav-bar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: sticky;
+  bottom: -24px;
+  margin: 0 -24px -24px -24px;
+  padding: 12px;
+  background-color: var(--bg-color);
+  border-top: var(--brutal-border-heavy);
+  z-index: 50;
+}
+
+.nav-tab {
+  background: transparent;
+  border: none;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: all 0.2s;
+}
+
+.nav-tab.active {
+  opacity: 1;
+  color: var(--primary-color);
+}
+
+.nav-tab:hover {
+  opacity: 0.9;
+}
+
+.nav-label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  :root {
+    --brutal-shadow: 4px 4px 0 var(--primary-color);
+    --brutal-border-heavy: 2px solid var(--text-color);
+    --brutal-btn-shadow: 2px 2px 0 var(--primary-color);
+    --brutal-btn-shadow-hover: 1px 1px 0 var(--primary-color);
+  }
+
+  .main-content {
+    flex-direction: column-reverse;
+  }
+  
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-top: var(--brutal-border-heavy);
+    padding: 16px;
+    gap: 16px;
+    overflow: visible !important;
+    position: relative;
+    z-index: 50;
+  }
+
+  .bottom-nav-bar {
+    bottom: -16px;
+    margin: 0 -16px -16px -16px;
+  }
+
+  .brutal-panel {
+    padding: 12px;
+    margin-bottom: 16px !important;
+  }
+
+  /* Make preset toggle cleaner on mobile */
+  .presets-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .presets-container > button {
+    flex: unset !important;
+    margin-bottom: 0 !important;
+  }
+
+  .preview-area {
+    padding: 16px;
+    min-height: 40vh;
+  }
+
+  /* Fix comparison slider on mobile */
+  .comparison-slider::after {
+    width: 20px;
+    height: 20px;
+    border-width: 2px;
+  }
+
+  .topbar {
+    padding: 12px 16px;
+  }
+
+  .brutal-card {
+    padding: 24px !important;
+    margin: 16px;
+  }
+
+  /* Footer styling on mobile */
+  footer {
+    padding: 16px 12px !important;
+  }
+  footer > div:first-child {
+    font-size: 0.85rem !important;
+  }
+  footer > div:last-child {
+    font-size: 0.75rem !important;
+  }
+}
+
